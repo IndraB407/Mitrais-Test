@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mitrais Carrot</title>
+    <link rel="stylesheet" href="style-home.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <a class="navbar-brand" href="https://carrot.mitrais.com/carrot/">
+          <img src="https://carrot.mitrais.com/carrot/assets/img/mitrais-logo.png" alt="">
+      </a>
+      <!-- <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Notification">
+                    <i class="fa fa-bell notif-icon"></i>
+                    <div id="notif" class="notif-active"></div>
+                </a>
+                <div id="notif-content" class="dropdown-menu right-0" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#" onclick="isRead(247244,'https://carrot.mitrais.com/carrot/staff/transactionHistory?table=earn')"><strong>Welcome to Mitrais !! SYSTEM sent you 50 carrots.</strong></a><a class="dropdown-item btn btn-carrot radius-5 mt-3" href="https://carrot.mitrais.com/carrot/notification" role="button"><center><small>See All Notification</small></center></a></div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Notification">
+                    <i class="fa fa-question-circle help_icon"></i>
+                    <div id="notif" class="notif-active"></div>
+                </a>
+                <div id="notif-content" class="dropdown-menu right-0" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#" onclick="isRead(247244,'https://carrot.mitrais.com/carrot/staff/transactionHistory?table=earn')"><strong>Welcome to Mitrais !! SYSTEM sent you 50 carrots.</strong></a><a class="dropdown-item btn btn-carrot radius-5 mt-3" href="https://carrot.mitrais.com/carrot/notification" role="button"><center><small>See All Notification</small></center></a></div>
+            </li>
+        </ul>
+      </div> -->
+    </nav>
+    <main class="container pt-5">
+      <div class="bg-white p-5 rounded">
+        <section class="mini-dashboard my-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card h-100 card-dashboard">
+                  <div class="card-body box-profile card-body-dashboard">
+                    <div class="row px-0 mr-0">
+                      <div class="col-md-4 my-auto">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Photos" class="img-fluid rounded-circle">
+                      </div>
+                      <div class="col-md-8 my-auto">
+                        <h4 class="mb-0 text-white">Someone name</h4>
+                        <p class="text-white" style="margin-bottom:0px">SE-JP</p>
+                        <p class="text-white">Training &amp; Development</p>
+                        <!-- <a href="edit-profile.html" class="badge badge-white">Edit Profile</a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card h-100 card-dashboard">
+                  <div class="card-body box-carrot card-body-dashboard">
+                    <div class="row px-0 mr-0">
+                      <div class="col-md-4 my-auto">
+                        <img src="https://carrot.mitrais.com/carrot/assets/img/mc-icon-carrot.png" alt="" class="img-fluid rounded-circle">
+                      </div>
+                      <div class="col-md-8 my-auto">
+                        <h4 class="text-white">My  Basket: 0</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card h-100 card-dashboard">
+                  <div class="card-body box-additional card-body-dashboard">
+                    <div class="row px-0">
+                      <div class="col-md-4 my-auto">
+                        <img src="https://carrot.mitrais.com/carrot/assets/img/mc-icon-transaction.png" alt="" class="img-fluid rounded-circle">
+                      </div>
+                      <div class="col-md-8 my-auto">
+                        <h4 class="text-white">My Carrot History</h4>
+                        <a href="https://carrot.mitrais.com/carrot/staff/transactionHistory" class="btn btn-outline-light btn-sm">View</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="bazaar mb-4 pb-5">
+          <div class="container">
+            <div class="card text-center">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="true" href="#"><h4><i class="fa fa-shopping-cart"></i>&nbsp;Bazaar</h4></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="true" href="#"><h4><i class="fa fa-heart"></i>&nbsp;Wishlist</h4></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <!-- <div class="row float-end">
+                  <div class="col-12">
+                    <label class="visually-hidden" for="searchItem">Search Item</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="searchItem" placeholder="Search Item">
+                    </div>
+                  </div>
+                </div>
+                <div class="row pt-4"></div> -->
+
+                <div class="row pt-3">
+                  <div class="col-md-3">
+                    <div class="card h-100">
+                      <img class="card-img-top" src="https://carrot.mitrais.com/carrotservice/assets/img/reward/e6a1b99618ed53da5cff1736eca3b2f9.jpeg" alt="Bazaar Item">
+                      <div class="card-body">
+                        <h5 class="card-title text-truncate">Mini Trash Bin</h5>
+                        <p class="card-text">13 Carrots</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-carrot">View Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <div class="card h-100">
+                      <img class="card-img-top" src="https://japansaucedotnet.files.wordpress.com/2018/12/IMG_5815.jpg?w=700" alt="Bazaar Item">
+                      <div class="card-body">
+                        <h5 class="card-title text-truncate">Gundam RX-78-2</h5>
+                        <p class="card-text">1000 Carrots</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-carrot">View Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <div class="card h-100">
+                      <img class="card-img-top" src="https://image.cermati.com/v1499740358/oz03opjl9usdjie9yqge.png" alt="Bazaar Item">
+                      <div class="card-body">
+                        <h5 class="card-title text-truncate">Revo Fit Koperasi</h5>
+                        <p class="card-text">200 Carrots</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-carrot">View Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="row pt-3">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <span class="page-link">1</span>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                
+                
+              </div>
+            </div>
+
+          </div>
+
+      </section>
+      </div>
+    </main>
+    <footer class="footer text-center">
+      <div class="container">
+          <span class="text-muted"><small>Copyright © 2018 Mitrais. All rights reserved.</small></span>
+      </div>
+  </footer>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.card-img-top {
+    width: 100%;
+    /* height: auto; */
+    min-height: 300px;
+  }
+  .btn-carrot {
+      background-color: #ff8000;
+      color: white;
+  }
+  .card-body-dashboard {
+      border-radius: 20px;
+  }
+  .card-dashboard {
+      border: none;
+  }
+  .box-profile {
+      background: linear-gradient(to bottom right, #00ff99 0%, #3399ff 100%);
+  }
+  .box-carrot {
+      background: linear-gradient(to bottom right, #ff6600 0%, #ffcc00 100%);
+  }
+  .box-additional {
+      background: linear-gradient(to bottom right, #6600cc 0%, #6699ff 100%);
+  }

@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mitrais Carrot</title>
+
+    <!-- CSS Bootstrap Implementation -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style-1.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md bg-light p-3">
+              <a class="navbar-brand"  href="#">
+                <img src="https://carrot.mitrais.com/carrot/assets/img/mitrais-logo.png" alt=""  class="d-inline-block align-text-top">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="navbar-collapse collapse w-100" id="collapsingNavbar3"></div>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Notification">
+                            <i class="fa fa-bell notif-icon"></i>
+                            <div id="notif" class="notif-active"></div>
+                        </a>
+                        <div id="notif-content" class="dropdown-menu right-0" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#" onclick="isRead(247244,'https://carrot.mitrais.com/carrot/staff/transactionHistory?table=earn')"><strong>Welcome to Mitrais !! SYSTEM sent you 50 carrots.</strong></a><a class="dropdown-item btn btn-carrot radius-5 mt-3" href="https://carrot.mitrais.com/carrot/notification" role="button"><center><small>See All Notification</small></center></a></div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Notification">
+                            <i class="fa fa-question-circle help_icon"></i>
+                            <div id="notif" class="notif-active"></div>
+                        </a>
+                        <div id="notif-content" class="dropdown-menu right-0" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#" onclick="isRead(247244,'https://carrot.mitrais.com/carrot/staff/transactionHistory?table=earn')"><strong>Welcome to Mitrais !! SYSTEM sent you 50 carrots.</strong></a><a class="dropdown-item btn btn-carrot radius-5 mt-3" href="https://carrot.mitrais.com/carrot/notification" role="button"><center><small>See All Notification</small></center></a></div>
+                    </li>
+                </ul>
+          </nav>
+    </header>
+    
+    <main role="main" class="container">          
+          
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12 px-md-0">
+                  <ul class="nav nav-pills mb-3"></ul>
+                  <div class="content">
+                        <main class="container">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">Bazzar</li>
+                                </ol>
+                              </nav>
+                            <h2 class="my-4 pl-0 text-grey ml-0 font-orange"> <span class="back-button"> <a href=""> <img src="https://carrot.mitrais.com/carrot/assets/img/back.png" alt="" class="back"></a></span> Bazzar</h2>
+
+                        </main>
+                        <section class="mb-4">
+                            <div class="detailcontent pb-4">
+                                <div class="row d-flex">
+                                    <div class="col-md-12">
+                                        <hr class="hr-title">
+                                        <h4 class="title-reward">Reward</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="https://carrot.mitrais.com/carrotservice/assets/img/reward/e6a1b99618ed53da5cff1736eca3b2f9.jpeg" class="img-fluid p-3 border border-mitrais rounded" alt="">
+                                    </div>
+                                    <div class="col-md-6 align-self-center p-3">
+                                        <h3 class="font-grape">Mini Trash Bin</h3>
+                                        <h4><strong class="carrot-orange">13 Carrots</strong></h4>
+                                        <p>Keep your desk clean by using this mini trash bin.</p>
+                                        <p class="mt-2"><small class="text-danger" id="remaining_quota">Remaining quota : 2</small></p>
+                                                            <button type="button" class="btn-disabled radius-5" data-toggle="modal" data-target="#buyitem" disabled="">Exchange</button>
+                                                                    <p class="mt-2"><small class="text-danger">You don't have enough carrots to exchange for this.</small></p>
+                                                                        </div>
+                                    <input type="hidden" id="rewarditem-id" value="271">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+                  </div>
+              </div>
+          </div>          
+    </main>
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted"><small>Copyright © 2018 Mitrais. All rights reserved.</small></span>
+        </div>
+    </footer>
+</body>

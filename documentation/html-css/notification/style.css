@@ -1,0 +1,43 @@
+.container-notification {
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.notification-text {
+    color: #838e9b;
+}
+
+a {
+    color: #838e9b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #838e9b;
+    text-decoration: underline;
+}
+
+.home-margin {
+    margin-left: -50px;
+}
+
+.navbar-icon {
+    text-decoration: none;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Ubah property transition */
+    transition: all 0.5s;
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    background-color: #f8f9fa;
+  }

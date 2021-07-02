@@ -1,0 +1,38 @@
+{
+  "name": "mitrais-carrot",
+  "version": "1.0.0",
+  "description": "mitrais carrot web application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlmaGusPut/Mitrais-Carrot.git"
+  },
+  "keywords": [
+    "mitrais-carrot",
+    "nodejs",
+    "mongoose",
+    "express",
+    "jest"
+  ],
+  "author": "team 3 junior programmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlmaGusPut/Mitrais-Carrot/issues"
+  },
+  "homepage": "https://github.com/AlmaGusPut/Mitrais-Carrot#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chokidar": "^3.5.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.14",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
+}

@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mitrais Carrot</title>
+
+    <!-- Bootstrap core CSS and custom icons using Font Awesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .btn-action-carrot{
+            margin: 2px;
+            width: 38px;
+        }
+        .error {
+            color: red;
+        }
+        /* for datatable processing message */
+        .dataTables_wrapper .dataTables_processing {
+            color:#777;
+            width:300px !important;
+            font-size: 1.2em;
+            background:white;
+            border: 1px solid #dee2e6;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        .wrap_carrot{
+            word-wrap: break-word; 
+            word-break: break-all; 
+            white-space: normal;
+        }
+        .help_icon{
+            font-size: 25px;
+            color: #888;
+        }
+        div.polaroid {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            border: 10px solid white;
+        }
+        div.polaroid > div.container {
+            text-align: center;
+            padding: 20px 20px 10px 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <a class="navbar-brand" href="">
+                <img src="assets/img/mitrais-logo.png" alt="">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Notification">
+                            <i class="fa fa-bell notif-icon"></i>
+                            <div id="notif" class=""></div>
+                        </a>
+                        <div id="notif-content" class="dropdown-menu right-0" aria-labelledby="navbarDropdown">
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="assets/doc/guide.pdf" target="_blank" role="button" title="Manual guide">
+                            <i class="fa fa-question-circle help_icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Menu">
+                            <i class="fa fa-bars" style="font-size:25px"></i>
+                        </a>
+                        <div class="dropdown-menu right-0" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                <strong>Alma Gustafianto</strong>
+                                <small class="text-sm">SE-JP, Training & Development</small>
+                                <small class="text-danger">Staff</small>
+                            </a>
+                            <!--
+                                <a class="dropdown-item" href=""><i class="fa fa-user"></i> Root Admin</a>
+                                <a class="dropdown-item" href=""><i class="fa fa-user"></i> Administrator</a>
+                                <a class="dropdown-item" href=""><i class="fa fa-user"></i> Manager</a>
+                                <a class="dropdown-item" href=""><i class="fa fa-user"></i> Staff</a>
+                            -->
+                            <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#modalCredit"><i class="fa fa-trophy"></i> Credits</a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" id="notif-setting" checked> Email Notification</a>
+                            <a class="dropdown-item" href=""><i class="fa fa-sign-out"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <section class="admin-tabs py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 px-md-0">
+                    <ul class="nav nav-pills mb-3" id="myTab" role="tablist">
+        <!--
+    <li class="nav-item">
+            </li>
+    <li class="nav-item">
+            </li> 
+    -->
+    </ul>                    <div class="tab-content search-box" id="tabContent">
+                        <div class="tab-pane active"><!-- Begin page content -->
+
+
+<main role="main" class="container">
+    <h2 class="mt-4 pl-0 text-grey ml-0">
+        <span class="back-button">
+            <a href=""><img src="assets/img/back.png" alt="" class="back" /></a><!-- for link home -->
+        </span> 
+        Home
+    </h2>
+</main>
+
+<section class="mini-dashboard my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row box-reward px-0 mr-0">
+                    <div class="col-md-4 my-auto">
+                        <img src="assets/img/mc-icon-carrot.png" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <p class="sub-title">Earned</p>
+                        <h2 class="text-white" id="share_receive">0 Carrots</h2>
+                        <a href="javascript:;" onclick="change_table('earn')" class="badge badge-white">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row box-shared px-0 mr-0">
+                    <div class="col-md-4 my-auto">
+                        <img src="assets/img/mc-icon-carrot.png" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <p class="sub-title">Shared</p>
+                        <h2 class="text-white" id="share_send">0 Carrots</h2>
+                        <a href="javascript:;" onclick="change_table('share')" class="badge badge-white">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row box-bazaar px-0">
+                    <div class="col-md-4 my-auto">
+                        <img src="assets/img/mc-icon-carrot.png" alt="" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <p class="sub-title">Bazaar</p>
+                        <h2 class="text-white" id="bazaar_send" >0 Carrots</h2>
+                        <a href="javascript:;" onclick="change_table('bazaar')" class="badge badge-white">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bazaar mb-4 pb-5">
+    <div class="container search-box pb-4">
+        <div class="row" name="row_table-earn" style="display:none">
+            <div class="col-md-12">
+                <div class="row d-flex align-content-end">
+                    <div class="col-md-12">
+                        <hr class="box-title-hr">
+                        <h4 class="my-2 box-title">My Earned History</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="staffEarnTransactionTable" class="table table-striped table-bordered table-hover mt-3" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:5%; max-width:5%;">#</th>
+                                    <th scope="col" style="width:25%; max-width:25%;">Earned From</th>
+                                    <th scope="col" style="width:15%; max-width:15%;">Earned Type</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Total</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Date</th>
+                                    <th scope="col" style="width:35%; max-width:35%;">Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" name="row_table-share" style="display:none">
+            <div class="col-md-12">
+                <div class="row d-flex align-content-end">
+                    <div class="col-md-12">
+                        <hr class="box-title-hr">
+                        <h4 class="my-2 box-title">My Shared History</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="staffShareTransactionTable" class="table table-striped table-bordered table-hover mt-3" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:5%; max-width:5%;">#</th>
+                                    <th scope="col" style="width:25%; max-width:25%;">Shared to</th>
+                                    <th scope="col" style="width:15%; max-width:15%;">Shared Type</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Total</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Date</th>
+                                    <th scope="col" style="width:35%; max-width:35%;">Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" name="row_table-bazaar" style="display:none">
+            <div class="col-md-12">
+                <div class="row d-flex align-content-end">
+                    <div class="col-md-12">
+                        <hr class="box-title-hr">
+                        <h4 class="my-2 box-title">My Bazaar History</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="staffBazaarTransactionTable" class="table table-striped table-bordered table-hover mt-3" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:5%; max-width:5%;">#</th>
+                                    <th scope="col" style="width:40%; max-width:25%;">Item</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Total</th>
+                                    <th scope="col" style="width:10%; max-width:10%;">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted"><small>Copyright &copy; 2018 Mitrais. All rights reserved.</small></span>
+        </div>
+    </footer>
+    <!-- Bootstrap core Javascript --> 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.blockUI.js"></script>
+    <script type="text/javascript">
+        var global_js = {
+            block: function(){
+                $.blockUI({
+                    baseZ: 2000,
+                    message:'<h3><img src="assets/img/mc-icon-carrot.gif"> please wait . . <h3>',
+                    css:{
+                        border: 'none',
+                        'padding-top': '15px',
+                        padding: '5px',
+                        backgroundColor: 'white',
+                        '-webkit-border-radius':'10px',
+                        '-moz-border-radius':'10px'
+                    }
+                });
+            },
+            unblock: function(){
+                $.unblockUI();
+            }
+        }
+            
+
+    </script>
+    <script>
+    var earnTable = null;
+    var shareTable = null;
+    var bazaarTable = null;
+    function change_table(type) {
+        $("div[name*='row_table']").hide();
+        switch (type) {
+            case 'earn':
+                $("div[name='row_table-earn']").show();
+                buildEarnTable('2');
+                break;
+            case 'share':
+                $("div[name='row_table-share']").show();
+                buildShareTable('2'); // 2 is share exchange type from lookup table (2 share & 2.1 birthday share)
+                break;
+            case 'bazaar':
+                $("div[name='row_table-bazaar']").show();
+                buildBazaarTable('3'); // 3 is bazaar exchange type from lookup table
+                break;
+        }
+    }
+
+    function buildEarnTable(type) {
+        if (earnTable != null)
+            earnTable.destroy();
+
+        earnTable = $('#staffEarnTransactionTable').DataTable({
+            "dom": 'ftipr',
+            "searching": true,
+            
+            "columns": [
+                {
+                    data: 'id',
+                    name: 'id',
+                },
+                {
+                    data: 'from_name',
+                    name: 'from_name'
+                },
+                {
+                    data: 'type_name',
+                    name: 'type_name'
+                },
+                {
+                    data: 'carrot',
+                    name: 'carrot',
+                    class: 'text-right',
+                    
+                },
+                {
+                    data: 'exchange_date',
+                    name: 'exchange_date'
+                },
+                {
+                    data: 'note',
+                    name: 'note',
+                    class: 'wrap_carrot'
+                },
+            ],
+            //Set column definition initialisation properties.
+            "columnDefs": [
+                {
+                    "targets": [5], //first column / numbering column
+                    "orderable": false, //set not orderable
+                },
+            ],
+            "order": [0, "desc"],
+            'language': {
+                "processing": '<img src="assets/img/mc-icon-carrot.gif"> Loading . .'
+            }
+        });
+    }
+    
+    function buildShareTable(type) {
+        if (shareTable != null)
+            shareTable.destroy();
+
+        shareTable = $('#staffShareTransactionTable').DataTable({
+            "dom": 'ftipr',
+            "searching": true,
+
+           
+            "columns": [
+                {
+                    data: 'id',
+                    name: 'id',
+                },
+                {
+                    data: 'to_name',
+                    name: 'to_name'
+                },
+                {
+                    data: 'type_name',
+                    name: 'type_name'
+                },
+                {
+                    data: 'carrot',
+                    name: 'carrot',
+                    class: 'text-right',
+                },
+                {
+                    data: 'exchange_date',
+                    name: 'exchange_date'
+                },
+                {
+                    data: 'note',
+                    name: 'note',
+                    class: 'wrap_carrot'
+                },
+            ],
+            //Set column definition initialisation properties.
+            "columnDefs": [
+                {
+                    "targets": [5], //first column / numbering column
+                    "orderable": false, //set not orderable
+                },
+            ],
+            "order": [0, "desc"],
+            'language': {
+                "processing": '<img src="assets/img/mc-icon-carrot.gif"> Loading . .'
+            }
+        });
+
+    }
+
+    function buildBazaarTable(type) {
+        if (shareTable != null)
+            shareTable.destroy();
+
+        shareTable = $('#staffBazaarTransactionTable').DataTable({
+            "dom": 'ftipr',
+            "searching": true,
+
+            "columns": [
+                {
+                    data: 'id',
+                    name: 'id',
+                },
+                {
+                    data: 'to_name',
+                    name: 'to_name'
+                },
+                {
+                    data: 'carrot',
+                    name: 'carrot',
+                    class: 'text-right',
+                },
+                {
+                    data: 'exchange_date',
+                    name: 'exchange_date'
+                },
+            ],
+            //Set column definition initialisation properties.
+            "columnDefs": [
+                {
+                    "targets": [], //first column / numbering column
+                    "orderable": false, //set not orderable
+                },
+            ],
+            "order": [0, "desc"],
+            'language': {
+                "processing": '<img src="assets/img/mc-icon-carrot.gif"> Loading . .'
+            }
+        });
+
+    }
+
+    $(document).ready(function () {
+        var getparam = "earn";
+        change_table(getparam);
+    });
+
+</script>    
+</body>
+</html>
